@@ -1,0 +1,25 @@
+.body {
+    background: url(/img/tretyakovskaya-galereya-shodit-na-ekskursiyu.jpg);
+    /*width: 100%;*/
+    position: fixed;
+    background-size: cover;
+
+}
+
+.picture {
+    width: 10%;
+    border: 3px solid #e741ec;
+    border-radius: 50%;
+}
+
+.open-picture {
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 500px;
+    right: 100px;
+    left: 100px;
+    border-radius: 10px;
+}
+
+

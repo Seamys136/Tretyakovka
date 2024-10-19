@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Третьяковка</title>
+    <link rel="stylesheet" href="/style.css"></link>
+</head>
+<body class="body">
+    <div id="paintings" class="paintings">
+        <img class="picture" src="/img/the horsewoman.jpg">
+        <img class="picture" src="/img//girl with peaches.jpg">
+        <img class="picture" src="/img/hunters at a halt.jpg">
+        <img class="picture" src="/img/ivan the terrible.jpg">
+        <img class="picture" src="/img//three heroes.jpg">
+        <img class="picture" src="/img/unequal marriage.jpg">
+        <img class="picture" src="/img/two again.jpg">
+    </div>
+     
+    <script>
+        const paintings = document.getElementById('paintings');
+        let pictureOpen;
+
+        paintings.addEventListener('click', function(event) {
+        const target = event.target;
+        console.log(target)
+        
+
+            if (pictureOpen && pictureOpen !== target) {
+                pictureOpen.classList.remove('open-picture');
+            }
+            target.classList.toggle('open-picture');
+            pictureOpen = target;
+            });
+    </script>
+</body>
+</html>
