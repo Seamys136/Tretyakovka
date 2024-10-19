@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Третьяковка</title>
-    <link rel="stylesheet" href="/style.css"></link>
+    <link rel="stylesheet" href="/style.css">
+    </link>
 </head>
+
 <body class="body">
     <div id="paintings" class="paintings">
         <img class="picture" src="/img/the horsewoman.jpg">
@@ -16,22 +19,73 @@
         <img class="picture" src="/img/unequal marriage.jpg">
         <img class="picture" src="/img/two again.jpg">
     </div>
-     
+
+    <div class="create-password-form">
+
+        <h1 class="create-password-tittle">Регистрация</h1>
+        <input id="login" class="login" type="login" placeholder="Введите логин"></span>
+        <input id="new-password" class="input-password hidden reliable average unreliable" type="password"
+            placeholder="Введите пароль"><span id="message"
+            class='message-text-unreliable message-text-average message-text-reliable'></span>
+
+        <button class="button">Создать</button>
+    </div>
+
     <script>
+
+
         const paintings = document.getElementById('paintings');
         let pictureOpen;
 
-        paintings.addEventListener('click', function(event) {
-        const target = event.target;
-        console.log(target)
-        
+        paintings.addEventListener('click', function (event) {
+            const target = event.target;
+            console.log(target)
+
 
             if (pictureOpen && pictureOpen !== target) {
                 pictureOpen.classList.remove('open-picture');
             }
             target.classList.toggle('open-picture');
             pictureOpen = target;
-            });
+        });
+        
+
+        const newPassword = document.getElementById('new-password');
+        const message = document.getElementById('message');
+
+        newPassword.addEventListener('input', checkingPasswordComplexity);
+        function checkingPasswordComplexity() {
+
+            if (newPassword.value.length > 0) {
+
+                newPassword.classList.remove('hidden', 'reliable', 'average');
+                newPassword.classList.add('unreliable');
+                message.textContent = 'Пароль ненадежный⚠️'
+                message.classList.remove('message-text-reliable', 'message-text-average');
+                message.classList.add('message-text-unreliable');
+            } else {
+                newPassword.classList.add('hidden');
+                message.textContent = ''
+            }
+            if ((newPassword.value.length > 5) &
+                (newPassword.value.length < 10)) {
+
+                newPassword.classList.remove('unreliable', 'reliable');
+                newPassword.classList.add('average');
+                message.textContent = 'Средний пароль✴️';
+                message.classList.remove('message-text-reliable', 'message-text-unreliable');
+                message.classList.add('message-text-average');
+            }
+            if (newPassword.value.length >= 10) {
+
+                newPassword.classList.remove('unreliable', 'average');
+                newPassword.classList.add('reliable');
+                message.textContent = 'Пароль надежный✅'
+                message.classList.remove('message-text-average', 'message-text-unreliable');
+                message.classList.add('message-text-reliable');
+            }
+        }
     </script>
 </body>
+
 </html>
