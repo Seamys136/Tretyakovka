@@ -1,6 +1,5 @@
 .body {
     background: url(/img/tretyakovskaya-galereya-shodit-na-ekskursiyu.jpg);
-    /*width: 100%;*/
     position: fixed;
     background-size: cover;
 
@@ -16,10 +15,92 @@
     width: 50%;
     margin: auto;
     position: absolute;
-    top: 500px;
-    right: 100px;
-    left: 100px;
+    top: 130px;
+    left: 350px;
     border-radius: 10px;
 }
+
+.body {
+    background-color: aquamarine;
+}
+
+
+.create-password-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    box-shadow: 20px 10px 8px 0px #0000001a, -4px 0px 4px 4px #0000001a;
+    border-radius: 70px;
+    background-color: #fbfbfb;
+    height: 350px;
+    position: absolute;
+    top: 130px;
+}
+
+.create-password-tittle, .button, .message-text-unreliable, .message-text-average, .message-text-reliable {
+    font-family: 'Shantell Sans', Helvetica, sans-serif;
+}
+
+.create-password-tittle {
+    font-size: 15px;
+}
+
+.button {
+    border: 1px solid 0;
+    background: #0d8f73;
+    border-radius: 10px;
+    width: 80px;
+    color: #ffff;
+    font-size: 15px;
+    padding: 10px;
+    box-shadow: -1px 10px 1px 0px #0000001a, 0px 0px 0px 0px #0000001a;
+    margin: 25px 20px 0px 15px;
+}
+
+.input-password, .login {
+    display: block;
+    width: 200px;
+    box-shadow: 0px 10px 4px 0px #0000001a, -4px 0px 4px 0px #0000001a;
+    border-radius: 10px;
+    height: 30px;  
+}
+
+.message-text-unreliable, .message-text-average, .message-text-reliable {
+    margin-top: 20px;
+
+}
+.unreliable {
+    background-color: #f80707;
+}
+
+.message-text-unreliable {
+    color: #f80707;
+}
+
+.average {
+    background-color: #e49607;
+}
+.message-text-average {
+    color: #e49607;
+}
+
+.reliable {
+    background-color: #09e01b;
+}
+.message-text-reliable {
+    color: #09e01b;
+}
+
+.hidden, .login {
+    background-color: #9fe9ee;
+}
+
+.message-text-unreliable, .message-text-average, .message-text-reliable{
+    font-size: 13px;
+}
+
+
 
 
